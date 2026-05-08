@@ -151,8 +151,17 @@ html {
     right: -100%;
   }
 
+  .floating-ai-toggle {
+    bottom: 100px;
+  }
+
   .floating-ai-toggle.active {
-    right: 30px;
+    right: 20px;
+    bottom: 110px;
+  }
+
+  .cb-input-area {
+    padding-bottom: 24px;
   }
 }
 
@@ -360,6 +369,11 @@ img {
 }
 
 /* Sidebar variant (fills sidebar panel) */
+.cb-sidebar {
+  height: 100%;
+  width: 100%;
+}
+
 .cb-card-sidebar {
   border-radius: 0;
   border: none;
@@ -832,6 +846,12 @@ img {
     height: calc(100vh - 100px);
     max-height: 600px;
     border-radius: 16px;
+  }
+
+  .cb-card.cb-card-sidebar {
+    height: 100%;
+    max-height: none;
+    border-radius: 0;
   }
 }
 
@@ -4963,6 +4983,7 @@ img {
   position: relative;
   box-shadow: 0 4px 15px rgba(108, 92, 231, 0.35);
   animation: hamburgerPulse 2.5s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 @keyframes hamburgerPulse {
@@ -5050,6 +5071,8 @@ img {
   border-radius: 100px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin-left: 8px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .nav-cta:hover {
@@ -5110,12 +5133,12 @@ img {
 }
 
 .hero-heading {
-  font-size: clamp(48px, 6vw, 96px);
+  color: #0f0f23;
+  letter-spacing: -2px;
+  margin-bottom: 40px;
+  font-size: clamp(40px, 6vw, 96px);
   font-weight: 800;
   line-height: 1.05;
-  color: #0f0f23;
-  margin-bottom: 40px;
-  letter-spacing: -2px;
 }
 
 .hero-heading sup {
@@ -7042,8 +7065,8 @@ img {
 
   .home-hero-right {
     width: 100%;
-    min-height: 480px;
-    padding: 40px 24px;
+    min-height: 540px;
+    padding: 10px 50px;
   }
 
   .chatbot-popup-container {
@@ -7052,7 +7075,7 @@ img {
 
   .story-cards-stack {
     max-width: 340px;
-    height: 500px;
+    height: 410px;
   }
 
   .story-card {
@@ -16588,7 +16611,12 @@ img {
   }
 
   .ind-carousel-wrapper {
-    padding: 60px 50px 60px;
+    padding: 60px 20px 80px;
+  }
+
+  .ind-carousel-track {
+    min-height: 1000px;
+    min-width: 300px;
   }
 
   .ind-carousel-arrow {
@@ -16597,11 +16625,11 @@ img {
   }
 
   .ind-carousel-prev {
-    left: 0;
+    left: -5px;
   }
 
   .ind-carousel-next {
-    right: 0;
+    right: -5px;
   }
 
   .ind-carousel-wrapper .ind-card:nth-child(6) {

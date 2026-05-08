@@ -45,4 +45,7 @@ const apiDevPlugin = () => ({
 
 export default defineConfig({
   plugins: [react(), apiDevPlugin()],
+  build: {
+    target: 'es2020',
+  },
 })

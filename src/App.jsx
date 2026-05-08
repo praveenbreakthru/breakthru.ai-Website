@@ -479,7 +479,8 @@ function Footer() {
 
 
 function App() {
-  const [chatbotOpen, setChatbotOpen] = useState(true)
+  // Initialize to false on mobile, true on desktop
+  const [chatbotOpen, setChatbotOpen] = useState(window.innerWidth > 768)
 
   const toggleChatbot = () => setChatbotOpen(prev => !prev)
   const closeChatbot = () => setChatbotOpen(false)
