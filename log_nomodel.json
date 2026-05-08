@@ -1,0 +1,24 @@
+{
+  "id": "pllns_0728386220041d8c2bc7f729aa72256b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "pong!",
+        "reasoning_content": "User says \"ping\". Likely wants a response like \"pong\" or similar. According to guidelines, we provide conversational but not overly proactive. Just respond friendly.",
+        "tool_calls": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "created": 1775624194,
+  "model": "gpt-oss-20b",
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 311,
+    "completion_tokens": 45,
+    "total_tokens": 356
+  },
+  "user_tier": "anonymous"
+}

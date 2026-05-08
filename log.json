@@ -1,0 +1,24 @@
+{
+  "id": "pllns_f1b5d41b9d68b823511ede45029ddb92",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "pong.",
+        "reasoning_content": "The user just sends \"ping\". It's likely a quick check. The system message says to respond to best of ability, not to be overly helpful. In this context, a simple acknowledgement would be fine: \"pong\". The user might be expecting \"pong\". Let's respond with \"pong\".",
+        "tool_calls": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "created": 1775624701,
+  "model": "gpt-oss-20b",
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 311,
+    "completion_tokens": 70,
+    "total_tokens": 381
+  },
+  "user_tier": "anonymous"
+}

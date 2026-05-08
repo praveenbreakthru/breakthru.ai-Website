@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Fusion Dashboard | Breakthru vs NOVA Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .gradient-bg-1 {
+            background: radial-gradient(circle at top left, #eff6ff, #ffffff);
+        }
+        .dark .gradient-bg-1 {
+            background: radial-gradient(circle at top left, #1e1b4b, #0f172a);
+        }
+
+        .gradient-bg-2 {
+            background: radial-gradient(circle at top right, #f8fafc, #f1f5f9);
+        }
+        .dark .gradient-bg-2 {
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0066FF',
+                            nova: '#8B1D41' // Nova Bank signature maroon/burgundy
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen">
+
+    <!-- THEME TOGGLE -->
+    <div class="fixed top-6 right-6 z-50">
+        <button onclick="toggleTheme()" class="p-3 rounded-full bg-white dark:bg-slate-800 shadow-xl border border-slate-200 dark:border-slate-700 hover:scale-110 transition-transform">
+            <i id="theme-icon" data-lucide="moon" class="w-6 h-6 text-slate-700 dark:text-yellow-400"></i>
+        </button>
+    </div>
+
+    <main class="flex flex-col lg:flex-row min-h-screen">
+        
+        <!-- FIRST PART: BREAKTHRU.AI -->
+        <section class="w-full lg:w-1/2 p-6 lg:p-12 gradient-bg-1 border-r border-slate-200 dark:border-slate-800">
+            <div class="max-w-2xl mx-auto space-y-8">
+                <!-- Header -->
+                <div class="flex items-center space-x-4 mb-12">
+                    <img src="https://breakthru.ai/lovable-uploads/5832938b-5657-4a64-a055-74de0765fc0d.png" alt="Breakthru Logo" class="h-12 w-auto object-contain">
+                </div>
+
+                <!-- Hero Section -->
+                <div class="glass-card p-8">
+                    <div class="flex items-center space-x-3 mb-4 text-blue-600 dark:text-blue-400">
+                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                        <span class="font-bold tracking-widest uppercase text-sm">Company Intelligence</span>
+                    </div>
+                    <h1 class="text-4xl font-bold mb-4">Breakthru.ai</h1>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pioneering the future of Enterprise AI. We bridge the gap between complex AI strategy and tangible business execution, specializing in custom AI agents and autonomous workflows.
+                    </p>
+                </div>
+
+                <!-- Stats/CEO -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-card p-6">
+                        <i data-lucide="user" class="w-6 h-6 text-blue-500 mb-3"></i>
+                        <h3 class="text-sm text-slate-500 uppercase">Leadership</h3>
+                        <p class="text-lg font-bold">Haris Ahmed</p>
+                        <p class="text-xs text-blue-600">Founder & CEO</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-blue-500 mb-3"></i>
+                        <h3 class="text-sm text-slate-500 uppercase">Headquarters</h3>
+                        <p class="text-lg font-bold">Remote-First</p>
+                        <p class="text-xs text-blue-600">Global Operations</p>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="glass-card p-8">
+                    <h2 class="text-xl font-bold mb-6 flex items-center">
+                        <i data-lucide="layers" class="w-5 h-5 mr-2 text-blue-500"></i> Specialized Services
+                    </h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <div class="bg-blue-100 dark:bg-blue-900/30 p-1 rounded-md mt-1"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i></div>
+                            <div><span class="font-semibold text-sm">Custom AI Agents</span><p class="text-xs text-slate-500">Bespoke LLM-powered agents for specific business domains.</p></div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <div class="bg-blue-100 dark:bg-blue-900/30 p-1 rounded-md mt-1"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i></div>
+                            <div><span class="font-semibold text-sm">Enterprise Automation</span><p class="text-xs text-slate-500">Scaling efficiency via autonomous workflow integrations.</p></div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <div class="bg-blue-100 dark:bg-blue-900/30 p-1 rounded-md mt-1"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i></div>
+                            <div><span class="font-semibold text-sm">Strategic Consulting</span><p class="text-xs text-slate-500">Executive-level AI readiness and implementation roadmaps.</p></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="glass-card p-6 bg-slate-900 text-white dark:bg-blue-600">
+                    <p class="text-xs uppercase opacity-70 mb-2">Inquiry Channel</p>
+                    <p class="text-lg font-medium">hello@breakthru.ai</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://breakthru.ai" class="text-xs underline hover:opacity-80">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECOND PART: NOVA BANK -->
+        <section class="w-full lg:w-1/2 p-6 lg:p-12 gradient-bg-2">
+            <div class="max-w-2xl mx-auto space-y-8">
+                <!-- Header -->
+                <div class="flex items-center space-x-4 mb-12">
+                    <div class="h-12 w-12 bg-brand-nova rounded-xl flex items-center justify-center text-white font-bold text-xl">N</div>
+                    <span class="text-2xl font-bold tracking-tight">NOVA BANK</span>
+                </div>
+
+                <!-- Hero Section -->
+                <div class="glass-card p-8 border-t-4 border-brand-nova">
+                    <div class="flex items-center space-x-3 mb-4 text-brand-nova">
+                        <i data-lucide="landmark" class="w-8 h-8"></i>
+                        <span class="font-bold tracking-widest uppercase text-sm">Lead Intelligence</span>
+                    </div>
+                    <h1 class="text-4xl font-bold mb-4">NOVA Bank</h1>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        A newly licensed national commercial bank in Nigeria (formerly Nova Merchant Bank). NOVA is driven by a philosophy of "Unconventional Thinking" to deliver superior financial solutions.
+                    </p>
+                </div>
+
+                <!-- Stats/CEO -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-card p-6">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-brand-nova mb-3"></i>
+                        <h3 class="text-sm text-slate-500 uppercase">Managing Director/CEO</h3>
+                        <p class="text-lg font-bold">Adebowale Oyedeji</p>
+                        <p class="text-xs text-brand-nova">Executive Leadership</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <i data-lucide="globe" class="w-6 h-6 text-brand-nova mb-3"></i>
+                        <h3 class="text-sm text-slate-500 uppercase">Presence</h3>
+                        <p class="text-lg font-bold">Lagos, Nigeria</p>
+                        <p class="text-xs text-brand-nova">National Commercial License</p>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="glass-card p-8">
+                    <h2 class="text-xl font-bold mb-6 flex items-center">
+                        <i data-lucide="briefcase" class="w-5 h-5 mr-2 text-brand-nova"></i> Financial Solutions
+                    </h2>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800/50">
+                            <span class="font-bold block text-sm">Corporate & Investment Banking</span>
+                            <p class="text-xs text-slate-500">Tailored credit, advisory, and capital market solutions for enterprises.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800/50">
+                            <span class="font-bold block text-sm">Retail & Digital Banking</span>
+                            <p class="text-xs text-slate-500">Modern consumer banking products and seamless digital platforms.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800/50">
+                            <span class="font-bold block text-sm">Treasury & Trade Services</span>
+                            <p class="text-xs text-slate-500">Expert liquidity management and international trade finance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="glass-card p-6 bg-brand-nova text-white">
+                    <p class="text-xs uppercase opacity-70 mb-2">Corporate Office</p>
+                    <p class="text-lg font-medium">1, Kofo Abayomi Street, Victoria Island, Lagos</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://novabank.ng" target="_blank" class="text-xs underline hover:opacity-80">www.novabank.ng</a>
+                        <span class="text-xs opacity-50">|</span>
+                        <a href="tel:+23412804000" class="text-xs underline hover:opacity-80">Contact Support</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Theme Toggle Logic
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                icon.setAttribute('data-lucide', 'moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                icon.setAttribute('data-lucide', 'sun');
+                localStorage.setItem('theme', 'dark');
+            }
+            lucide.createIcons();
+        }
+
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "id": "pllns_0f8bb4aefe4862a5ec690af12b7a6b54",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "At breakthru.ai we specialize in two core service areas:\n\n1. **Strategy Consulting** – Helping businesses define clear, data‑driven roadmaps for growth, market positioning, and operational optimization.\n\n2. **Data Services** – Providing collection, analysis, and actionable insights from your data to inform decision‑making and drive measurable results.",
+        "reasoning_content": "Need to answer: Company offers strategy and data services. Provide description. Must not mention policy. Use company's data. Provide concise.",
+        "tool_calls": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "created": 1775627232,
+  "model": "gpt-oss-20b",
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 126,
+    "completion_tokens": 105,
+    "total_tokens": 231
+  },
+  "user_tier": "anonymous"
+}
