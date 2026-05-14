@@ -1,0 +1,115 @@
+{
+    "broker": {
+        "host": "localhost",
+        "port": 1883,
+        "username": "emScomod",
+        "password": "prism"
+    },
+    "interval_seconds": 1,
+    "batch_size": 300,
+    "sites": [
+        {
+            "id": "3773f6aa-4d8f-417e-be3e-b350a2816dcd",
+            "site_code": "IN-1019565",
+            "controller_code": "IN-1019565"
+        },
+        {
+            "id": "c4af1964-71c2-4b22-bbd9-a597dae5bba4",
+            "site_code": "EMS0001",
+            "controller_code": "EMS0001"
+        }
+    ],
+    "topic_groups": {
+        "ems/snmp/data/periodic": [
+            "SystemInfo",
+            "DcPowerSystem",
+            "PsInput",
+            "PsBattery",
+            "LiIon"
+        ],
+        "ems/snmp/data/advance": [
+            "EbAcv",
+            "Fuel_Sencore",
+            "Battery_Charger"
+        ],
+        "ems/gpio/data": [
+            "gpio_primary",
+            "gpio_secondary"
+        ],
+        "ems/snmp/data/trap": [
+            "Trap"
+        ]
+    },
+    "data_belongs": {
+        "SystemInfo": {
+            "topic": "ems/snmp/data/periodic",
+            "samples": [
+                "{\"SysModel\": \"M2000-PP\", \"SysCode\": \"IMAH\", \"SysSWVersion\": \"34.10.14\", \"SysBaseSWVersion\": \"34.10.14\", \"SysBootSWVersion\": \"34.14.03\", \"SysConfigSWVersion\": \"43.00\", \"SysControllerReset\": \"0\", \"SysDate\": \"23/12/25\", \"SysTime\": \"23:38:55\"}"
+            ]
+        },
+        "DcPowerSystem": {
+            "topic": "ems/snmp/data/periodic",
+            "samples": [
+                "{\"SysVoltage\": \"54.34\", \"SysStatus\": \"1\", \"SysCurrent\": \"66.0\", \"PreUnderVoltageThd\": \"48.0\", \"PreUnderVoltageHys\": \"0.5\", \"BattLVDVoltThd\": \"44.4\", \"BattLVDVoltHys\": \"3.6\", \"SysOverLoadSet\": \"500\", \"SysOverLoadRestore\": \"-10\", \"DCHighVoltSet\": \"56.5\", \"DCHighVoltRestore\": \"0.5\", \"BattCurrShuntVal\": \"500\", \"LoadCurrShuntVal\": \"500\", \"DcPowerLogic\": \"0\", \"EnableDgDc\": \"0\", \"EnableEbDc\": \"0\", \"EBCapacity\": \"17.00\", \"DGCapacity\": \"17.00\", \"DCEfficiency\": \"90\"}"
+            ]
+        },
+        "PsInput": {
+            "topic": "ems/snmp/data/periodic",
+            "samples": [
+                "{\"ACPhaseType\": \"1\", \"Ph1Volt\": \"248\", \"Ph2Volt\": \"250\", \"Ph3Volt\": \"248\", \"Ph1Curr\": \"7.7\", \"Ph2Curr\": \"7.7\", \"Ph3Curr\": \"3.2\", \"GridNeutralCurr\": \"\", \"Ph1Freq\": \"49.7\", \"Ph2Freq\": \"50.0\", \"Ph3Freq\": \"49.6\", \"AcVoltHighWarnThd\": \"270\", \"AcVoltHighWarnHys\": \"-10\", \"AcVoltLowWarnThd\": \"150\", \"AcVoltLowWarnHys\": \"10\", \"AcVoltHighCutOffThd\": \"300\", \"AcVoltHighCutOffHys\": \"-10\", \"AcVoltLowCutOffThd\": \"90\", \"AcVoltLowCutOffHys\": \"10\"}"
+            ]
+        },
+        "PsBattery": {
+            "topic": "ems/snmp/data/periodic",
+            "samples": [
+                "{\"BattCount\": \"4\", \"TotBattCurrent\": \"0.0\", \"BattTemp\": \"35.1\", \"IsTempCompEnable\": \"0\", \"TempCompFactor\": \"3\", \"VRLABattCapacity\": \"200\", \"VRLABCLFactorStd\": \"20\", \"VRLABCLFactorAlt\": \"20\", \"BattTempHighHys\": \"-5.0\", \"BattTempHighThd\": \"55.0\", \"TempCompUThd\": \"55.8\", \"TempCompLThd\": \"52.0\", \"IsConfigChargeTempAbortEnable\": \"0\", \"ChargeMaxTempAbortThd\": \"50.0\", \"ChargeMaxTempAbortHys\": \"-10.0\", \"IsConfigChargeDurationAbortEnable\": \"0\", \"ChargeDurationAbortThd\": \"600\", \"ChargeAbortResetTime\": \"60\", \"IsConfigEqualizeModeEnable\": \"1\", \"EqualizeVolt\": \"56.0\", \"EqualizeModeStartHr\": \"12\", \"EqualizeModeDuration\": \"40\", \"EqualizeModeDayInterval\": \"45\", \"EqualizeModeMaxTempThd\": \"60.0\", \"ExtendedChrgVolt\": \"64.5\", \"BattTempLowThd\": \"5.0\", \"BattTempLowHys\": \"5.0\", \"BatteryEntry\": [{\"BattIndex\": \"1\", \"BattVoltage\": \"54.34\", \"BattCurrent\": \"0.0\", \"BattStateOfChrg\": \"100.0\", \"IsBattTestEnable\": \"0\", \"BattTestStartHr\": \"0\", \"BattTestStartMin\": \"0\", \"BattTestStartDate\": \"1\", \"BattTestPeriod\": \"3\", \"BattTestStatus\": \"0\", \"BattLastTestVoltRes\": \"0.00\", \"BattEndOfDisChrgTime\": \"2\", \"BattEndOfDisChrgVolt\": \"47.0\"}], \"VRLAFloatVolt\": \"54.0\", \"VRLAChrgVolt\": \"54.0\", \"BattStatus\": \"6\", \"BattType\": \"0\", \"CommandExtChrgMode\": \"0\", \"EnableBatteryIsolation\": \"1\", \"FloatToCharge\": \"5\", \"ChargeToFloat\": \"3\", \"ManualChargeStatus\": \"0\", \"StartManualCharge\": \"0\", \"ManualChargeVoltage\": \"55.2\", \"SetNominalTemp\": \"25.0\"}"
+            ]
+        },
+        "LiIon": {
+            "topic": "ems/snmp/data/periodic",
+            "samples": [
+                "{\"InstalledModule\": \"2\", \"ActiveModule\": \"0\", \"ModuleCapacity\": \"75\", \"BattBankCapacity\": \"0\", \"BattBankRemainAH\": \"0\", \"BattBankBusVolt\": \"0.0\", \"ModuleChrgCurrLimit\": \"0.0\", \"ModuleMaxCurr\": \"0.0\", \"BattBankAmbientTemp\": \"0.0\", \"BattBankFloatVolt\": \"\", \"BattBankChrgVolt\": \"54.0\", \"ManufacturerName\": \"\", \"ManufacturerSerialNo\": \"\", \"LiIonEntry\": [{\"ModuleIndex\": \"1\", \"ModuleStatus\": \"0\", \"ModuleVolt\": \"0.0\", \"ModuleCurrent\": \"0.0\", \"ModuleTemp\": \"0.0\", \"ModuleStateOfCharge\": \"0.0\", \"ModuleStateOfHealth\": \"0.0\"}, {\"ModuleIndex\": \"2\", \"ModuleStatus\": \"0\", \"ModuleVolt\": \"0.0\", \"ModuleCurrent\": \"0.0\", \"ModuleTemp\": \"0.0\", \"ModuleStateOfCharge\": \"0.0\", \"ModuleStateOfHealth\": \"0.0\"}], \"ManufacturerPartNo\": \"\", \"DisChrgCurrLimit\": \"0.0\", \"ChrgCurrSmps\": \"0.0\", \"FloatToCharge\": \"5\", \"ChargeToFloat\": \"3\"}"
+            ]
+        },
+        "EbAcv": {
+            "topic": "ems/snmp/data/advance",
+            "samples": [
+                "3fb071d73e997b333f8a39ce000000003ea872b03e126e983efef9db000000004087efb440055ec9400a8fae0000000043c23f9943dfe73143af575b43b780414367a50743abd99843af9df20000000040c1f31c40c3283740c6665840bc4ac342cc0000451a1666000000000061667f0000000000000001000b20a5000011fa000186a5000000630000019f0005000003380001002d000a000005a000002580",
+                "3fed7941000000003fed504f000000003f7b22d1000000003f79db23000000003ff335d6000000003ff30be90000000000000000000000000000000000000000437dfaf100000000437dfaf10000000040f0e5b30000000040f0e5b3000000004248000045ac3e660000000000ab72d00000000800000001000af7b7000011fa000186a4000000630005019f0000000500000017000a000005a0000025800000",
+                "3fed7941000000003fed504f000000003f7b22d1000000003f79db23000000003ff335d6000000003ff30be90000000000000000000000000000000000000000437dfaf100000000437dfaf10000000040f0e5b30000000040f0e5b3000000004248000045ac3e660000000000ab72d00000000800000001000af7b7000011fa000186a4000000630005019f0000000500000017000a000005a0000025800000",
+                "000000000000000000000000000000003ba3d70a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000004378008f000000004378008f000000000000000000000000000000000000000042480000451ee6660000000000e6aa9f0000000000000001000b2793000011fa000186a4000000630005019f0000040000000031000a000005a0000025800000",
+                "000000000000000000000000000000003e947ae1000000003e91eb85000000003da5ac6c000000003da5bcee0000000000000000000000000000000000000000437ecc5f00000000437ecc5f000000003ea6994d000000003ea6994d0000000042480000420e000000000000005581210000000000000001000b16d5000011fa000186a4000000630005019f0000020c00000019000a000005a0000025800000"
+            ]
+        },
+        "Fuel_Sencore": {
+            "topic": "ems/snmp/data/advance",
+            "samples": [
+                "01ad"
+            ]
+        },
+        "Battery_Charger": {
+            "topic": "ems/snmp/data/advance",
+            "samples": [
+                "0545000005487fffffff0000000400000000000000000000000000000000"
+            ]
+        },
+        "gpio_primary": {
+            "topic": "ems/gpio/data",
+            "samples": [
+                "06c10bd5000000000000000000000000000000000000000100000001000100010001000100000000000000000000000000000000"
+            ]
+        },
+        "gpio_secondary": {
+            "topic": "ems/gpio/data",
+            "samples": [
+                "0a7a0b1f000000000000000000000000000000000000000100000001000100010001000100000001000100010000000000000000"
+            ]
+        },
+        "Trap": {
+            "topic": "ems/snmp/data/trap",
+            "samples": [
+                "{\"SiteCode\": \"LAB001\", \"AlarmId\": \"1\", \"AlarmDesc\": \"Door Open\", \"AlarmStatus\": \"1\", \"AlarmSeverity\": \"0\", \"AlarmDatetime\": \"02/05/26-09:11:40\"}"
+            ]
+        }
+    }
+}
