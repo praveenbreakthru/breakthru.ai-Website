@@ -49,7 +49,7 @@ function IndustriesPage() {
             <div className="breadcrumb-nav">
         <Link to="/" className="breadcrumb-link">Home</Link>
         <span className="breadcrumb-separator"> &gt; </span>
-        <span className="breadcrumb-current">Industries</span>
+        <span className="breadcrumb-current">Solutions</span>
       </div>
       {/* Industries Section */}
       <section
