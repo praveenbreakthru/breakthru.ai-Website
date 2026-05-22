@@ -300,6 +300,41 @@ img {
   letter-spacing: -3px;
 }
 
+/* Strategic Alliances adjustments when sidebar is open */
+.main-layout-wrapper.sidebar-open .eco-card-logo {
+  width: 42px !important;
+  height: 42px !important;
+  top: 15px !important;
+  right: 15px !important;
+}
+
+.main-layout-wrapper.sidebar-open .eco-card-1 .eco-card-logo {
+  padding: 5px !important;
+  border-radius: 10px !important;
+}
+
+.main-layout-wrapper.sidebar-open .eco-card-title {
+  font-size: 21px !important;
+  padding-right: 46px !important;
+}
+
+.main-layout-wrapper.sidebar-open .eco-card-number,
+.main-layout-wrapper.sidebar-open .eco-card-sub {
+  padding-right: 46px !important;
+}
+
+@media (max-width: 1400px) {
+  .main-layout-wrapper.sidebar-open .eco-cards-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-layout-wrapper.sidebar-open .eco-cards-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* ========================================
    PREMIUM CHATBOT UI — cb-* Design System
    Dark theme · Glassmorphism · Purple/Blue accent
@@ -2815,6 +2850,7 @@ img {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  min-width: 0;
 }
 
 .ind-card-left::after {
@@ -2926,6 +2962,7 @@ img {
   letter-spacing: -1px;
   line-height: 1.15;
   margin-bottom: 12px;
+  word-break: break-word; /* Ensure long words like TELECOMMUNICATION wrap */
 }
 
 .ind-card-subtitle {
@@ -3023,6 +3060,7 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
+  min-width: 0;
 }
 
 .ind-card-center::after {
@@ -3168,6 +3206,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
 }
 
 .ind-cap-header,
@@ -3800,12 +3839,13 @@ img {
   font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   font-size: 36px;
   font-weight: 900;
-  color: rgba(162, 155, 254, 0.15);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
 
 .eco-partner-step:hover .eco-step-num {
-  color: rgba(162, 155, 254, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 .eco-step-title {
@@ -3817,9 +3857,14 @@ img {
 
 .eco-step-desc {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.eco-partner-step:hover .eco-step-desc {
+  color: rgba(255, 255, 255, 1);
 }
 
 /* --- Stats Section --- */
@@ -3904,9 +3949,14 @@ img {
 .eco-tech-header {
   font-size: 14px;
   font-weight: 700;
-  color: #a29bfe;
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 16px;
   letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.eco-tech-card:hover .eco-tech-header {
+  color: #ffffff;
 }
 
 .eco-tech-items {
@@ -3918,9 +3968,14 @@ img {
 .eco-tech-items span {
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   padding-left: 14px;
   position: relative;
+  transition: color 0.3s ease;
+}
+
+.eco-tech-card:hover .eco-tech-items span {
+  color: #ffffff;
 }
 
 .eco-tech-items span::before {
@@ -3931,7 +3986,12 @@ img {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(162, 155, 254, 0.3);
+  background: rgba(162, 155, 254, 0.6);
+  transition: background 0.3s ease;
+}
+
+.eco-tech-card:hover .eco-tech-items span::before {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* Ecosystem Responsive */
@@ -16411,20 +16471,22 @@ img {
   position: relative;
   width: 100%;
   perspective: 1500px;
-  padding: 80px 0 60px;
+  padding: 80px 70px 60px;
+  overflow: hidden; /* Clip perspective-transformed cards behind active card */
 }
 
 .ind-carousel-track {
   position: relative;
   width: 100%;
   min-height: 420px;
-  transform-style: preserve-3d;
+  display: grid;
 }
 
 .ind-carousel-wrapper .ind-card {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  grid-area: 1 / 1 / 2 / 2;
+  top: auto;
+  left: auto;
   width: 100%;
   opacity: 0.55;
   pointer-events: none;
@@ -16436,42 +16498,42 @@ img {
 
 /* Card 6 - backmost, highest */
 .ind-carousel-wrapper .ind-card:nth-child(6) {
-  transform: translateY(-125px) translateZ(-300px) scale(0.75);
+  transform: translateY(-125px) scale(0.75);
   z-index: 1;
   opacity: 0.4;
 }
 
 /* Card 5 */
 .ind-carousel-wrapper .ind-card:nth-child(5) {
-  transform: translateY(-100px) translateZ(-240px) scale(0.80);
+  transform: translateY(-100px) scale(0.80);
   z-index: 2;
   opacity: 0.45;
 }
 
 /* Card 4 */
 .ind-carousel-wrapper .ind-card:nth-child(4) {
-  transform: translateY(-75px) translateZ(-180px) scale(0.85);
+  transform: translateY(-75px) scale(0.85);
   z-index: 3;
   opacity: 0.5;
 }
 
 /* Card 3 */
 .ind-carousel-wrapper .ind-card:nth-child(3) {
-  transform: translateY(-50px) translateZ(-120px) scale(0.90);
+  transform: translateY(-50px) scale(0.90);
   z-index: 4;
   opacity: 0.55;
 }
 
 /* Card 2 */
 .ind-carousel-wrapper .ind-card:nth-child(2) {
-  transform: translateY(-25px) translateZ(-60px) scale(0.95);
+  transform: translateY(-25px) scale(0.95);
   z-index: 5;
   opacity: 0.6;
 }
 
 /* Card 1 - frontmost, lowest */
 .ind-carousel-wrapper .ind-card:nth-child(1) {
-  transform: translateY(0) translateZ(0) scale(1);
+  transform: translateY(0) scale(1);
   z-index: 6;
   opacity: 0.65;
 }
@@ -16484,6 +16546,13 @@ img {
   pointer-events: auto;
   border-color: rgba(255, 255, 255, 0.2) !important;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Hide stacked cards permanently to avoid the under-under stack effect */
+.ind-carousel-wrapper .ind-card:not(.ind-card-active) {
+  opacity: 0 !important;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 /* Navigation Arrows */
@@ -16514,11 +16583,11 @@ img {
 }
 
 .ind-carousel-prev {
-  left: -26px;
+  left: 10px;
 }
 
 .ind-carousel-next {
-  right: -26px;
+  right: 10px;
 }
 
 /* Dots Indicator */
@@ -16562,7 +16631,7 @@ img {
   }
 
   .ind-carousel-wrapper {
-    padding: 80px 0 80px;
+    padding: 80px 40px 80px;
   }
 
   .ind-carousel-arrow {
@@ -16579,23 +16648,23 @@ img {
   }
 
   .ind-carousel-wrapper .ind-card:nth-child(6) {
-    transform: translateY(-100px) translateZ(-240px) scale(0.75);
+    transform: translateY(-100px) scale(0.75);
   }
 
   .ind-carousel-wrapper .ind-card:nth-child(5) {
-    transform: translateY(-80px) translateZ(-190px) scale(0.80);
+    transform: translateY(-80px) scale(0.80);
   }
 
   .ind-carousel-wrapper .ind-card:nth-child(4) {
-    transform: translateY(-60px) translateZ(-140px) scale(0.85);
+    transform: translateY(-60px) scale(0.85);
   }
 
   .ind-carousel-wrapper .ind-card:nth-child(3) {
-    transform: translateY(-40px) translateZ(-95px) scale(0.90);
+    transform: translateY(-40px) scale(0.90);
   }
 
   .ind-carousel-wrapper .ind-card:nth-child(2) {
-    transform: translateY(-20px) translateZ(-50px) scale(0.95);
+    transform: translateY(-20px) scale(0.95);
   }
 }
 
