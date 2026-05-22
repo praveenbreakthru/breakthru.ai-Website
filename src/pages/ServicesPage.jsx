@@ -66,7 +66,7 @@ function ServicesPage() {
           {/* Service Cards Grid */}
           <div className="svc-grid">
             {/* Card 1 - Strategy */}
-            <Link to="/strategy" className="svc-card svc-card-strategy" style={{ textDecoration: 'none' }}>
+            <div className="svc-card svc-card-strategy">
               <div className="svc-card-top-bar" />
               <div className="svc-card-header">
                 <span className="svc-card-num">01</span>
@@ -91,11 +91,11 @@ function ServicesPage() {
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                 </svg>
               </div>
-              <div className="svc-card-explore">Explore</div>
-            </Link>
+              <Link to="/strategy" className="svc-card-explore" style={{ textDecoration: 'none' }}>Explore</Link>
+            </div>
 
             {/* Card 2 - Data & AI */}
-            <Link to="/data-ai" className="svc-card svc-card-data" style={{ textDecoration: 'none' }}>
+            <div className="svc-card svc-card-data">
               <div className="svc-card-top-bar" />
               <div className="svc-card-header">
                 <span className="svc-card-num">02</span>
@@ -119,14 +119,18 @@ function ServicesPage() {
                   <path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2v4a4 4 0 0 0 8 0v-4h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z" />
                 </svg>
               </div>
-              <div className="svc-card-explore">Explore</div>
-            </Link>
+              <Link to="/data-ai" className="svc-card-explore" style={{ textDecoration: 'none' }}>Explore</Link>
+            </div>
 
             {/* Card 3 - Engineering */}
-            <Link to="/engineering" className="svc-card svc-card-eng" style={{ textDecoration: 'none' }}>
+            <div className="svc-card svc-card-eng">
               <div className="svc-card-top-bar" />
               <div className="svc-card-header">
                 <span className="svc-card-num">03</span>
+                <div className="svc-card-tags">
+                  <span className="svc-card-tag">Microservices</span>
+                  <span className="svc-card-tag">Cloud-Native</span>
+                </div>
               </div>
               <h3 className="svc-card-title">Engineering</h3>
               <p className="svc-card-desc">
@@ -144,11 +148,11 @@ function ServicesPage() {
                   <polyline points="8 6 2 12 8 18" />
                 </svg>
               </div>
-              <div className="svc-card-explore">Explore</div>
-            </Link>
+              <Link to="/engineering" className="svc-card-explore" style={{ textDecoration: 'none' }}>Explore</Link>
+            </div>
 
             {/* Card 4 - Growth */}
-            <Link to="/growth" className="svc-card svc-card-growth" style={{ textDecoration: 'none' }}>
+            <div className="svc-card svc-card-growth">
               <div className="svc-card-top-bar" />
               <div className="svc-card-header">
                 <span className="svc-card-num">04</span>
@@ -175,11 +179,11 @@ function ServicesPage() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
               </div>
-              <div className="svc-card-explore">Explore</div>
-            </Link>
+              <Link to="/growth" className="svc-card-explore" style={{ textDecoration: 'none' }}>Explore</Link>
+            </div>
 
             {/* Card 5 - Product / Platform Squads */}
-            <Link to="/product-squads" className="svc-card svc-card-product" style={{ textDecoration: 'none' }}>
+            <div className="svc-card svc-card-product">
               <div className="svc-card-top-bar" />
               <div className="svc-card-header">
                 <span className="svc-card-num">05</span>
@@ -206,14 +210,18 @@ function ServicesPage() {
                   <line x1="12" y1="17" x2="12" y2="21" />
                 </svg>
               </div>
-              <div className="svc-card-explore">Explore</div>
-            </Link>
+              <Link to="/product-squads" className="svc-card-explore" style={{ textDecoration: 'none' }}>Explore</Link>
+            </div>
 
             {/* Card 6 - Family Office */}
-            <Link to="/family-office" className="svc-card svc-card-family" style={{ textDecoration: 'none' }}>
+            <div className="svc-card svc-card-family">
               <div className="svc-card-top-bar" />
               <div className="svc-card-header">
                 <span className="svc-card-num">06</span>
+                <div className="svc-card-tags">
+                  <span className="svc-card-tag">Wealth Tech</span>
+                  <span className="svc-card-tag">Modernization</span>
+                </div>
               </div>
               <h3 className="svc-card-title">Family Office</h3>
               <p className="svc-card-desc">
@@ -232,8 +240,8 @@ function ServicesPage() {
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
               </div>
-              <div className="svc-card-explore">Explore</div>
-            </Link>
+              <Link to="/family-office" className="svc-card-explore" style={{ textDecoration: 'none' }}>Explore</Link>
+            </div>
           </div>
         </div>
       </section>

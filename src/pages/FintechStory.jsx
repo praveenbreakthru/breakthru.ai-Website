@@ -86,7 +86,7 @@ function FintechStory() {
                 <source src="" type="video/mp4" />
               </video>
             </a>
-            <img src="https://miro.medium.com/1*3dxV_CF-kCFRXNCmaXcBMA.gif" alt="Bank Heist GIF" className="fs-hero-animation-gif" loading="lazy" />
+            <img src="/gifs/bank-heist.gif" alt="Bank Heist GIF" className="fs-hero-animation-gif" loading="lazy" />
           </div>
         </div>
         <div className="fs-hero-scroll-hint">

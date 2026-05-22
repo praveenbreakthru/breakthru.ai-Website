@@ -1345,15 +1345,15 @@ img {
 }
 
 .story-card-1 .story-card-bg-gif {
-  background-image: url('https://cdnl.iconscout.com/lottie/premium/thumb/fintech-animation-gif-download-10695981.gif');
+  background-image: url('/gifs/fintech-animation.gif');
 }
 
 .story-card-2 .story-card-bg-gif {
-  background-image: url('https://cdn.dribbble.com/userupload/14080634/file/original-8ac881a57fd7ef31b113e0acc2aa91e3.gif');
+  background-image: url('/gifs/dribbble-manufacturing.gif');
 }
 
 .story-card-3 .story-card-bg-gif {
-  background-image: url('https://whizardapi.com/wp-content/uploads/2021/06/5ceb94307a0da88913675942_Roaming.gif');
+  background-image: url('/gifs/roaming.gif');
 }
 
 .story-card-4 .story-card-bg-gif {
@@ -2004,8 +2004,7 @@ img {
 }
 
 .svc-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: transparent;
+  /* Removed transform to prevent card pop-up */
 }
 
 .svc-card-top-bar {
@@ -2042,39 +2041,27 @@ img {
 }
 
 .svc-card-strategy:hover {
-  background: linear-gradient(145deg, #7d6ff0 0%, #5a45e0 100%);
-  border-color: rgba(108, 92, 231, 0.6);
-  box-shadow: 0 20px 60px rgba(108, 92, 231, 0.35);
+  /* background: linear-gradient(145deg, #7d6ff0 0%, #5a45e0 100%); */
 }
 
 .svc-card-data:hover {
-  background: linear-gradient(145deg, #00d4a8 0%, #00a87e 100%);
-  border-color: rgba(0, 184, 148, 0.6);
-  box-shadow: 0 20px 60px rgba(0, 184, 148, 0.35);
+  /* background: linear-gradient(145deg, #00d4a8 0%, #00a87e 100%); */
 }
 
 .svc-card-eng:hover {
-  background: linear-gradient(145deg, #1a91f0 0%, #0870c0 100%);
-  border-color: rgba(9, 132, 227, 0.6);
-  box-shadow: 0 20px 60px rgba(9, 132, 227, 0.35);
+  /* background: linear-gradient(145deg, #1a91f0 0%, #0870c0 100%); */
 }
 
 .svc-card-growth:hover {
-  background: linear-gradient(145deg, #f055a5 0%, #d03d85 100%);
-  border-color: rgba(232, 67, 147, 0.6);
-  box-shadow: 0 20px 60px rgba(232, 67, 147, 0.35);
+  /* background: linear-gradient(145deg, #f055a5 0%, #d03d85 100%); */
 }
 
 .svc-card-product:hover {
-  background: linear-gradient(145deg, #f5a623 0%, #e09510 100%);
-  border-color: rgba(243, 156, 18, 0.6);
-  box-shadow: 0 20px 60px rgba(243, 156, 18, 0.25);
+  /* background: linear-gradient(145deg, #f5a623 0%, #e09510 100%); */
 }
 
 .svc-card-family:hover {
-  background: linear-gradient(145deg, #10e0db 0%, #00bab5 100%);
-  border-color: rgba(0, 206, 201, 0.6);
-  box-shadow: 0 20px 60px rgba(0, 206, 201, 0.35);
+  /* background: linear-gradient(145deg, #10e0db 0%, #00bab5 100%); */
 }
 
 .svc-card-header {
@@ -2250,20 +2237,21 @@ img {
   margin-top: auto;
   padding: 10px 24px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 100px;
-  color: #fff;
+  color: #ffffff;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   align-self: center;
 }
 
-.svc-card:hover .svc-card-explore {
+.svc-card-explore:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
 /* --- How We Deliver --- */
@@ -2367,40 +2355,22 @@ img {
 }
 
 .svc-step-1 .svc-step-num {
-  color: rgba(108, 92, 231, 0.2);
+  color: rgba(108, 92, 231, 1);
 }
 
 .svc-step-2 .svc-step-num {
-  color: rgba(0, 184, 148, 0.2);
+  color: rgba(0, 184, 148, 1);
 }
 
 .svc-step-3 .svc-step-num {
-  color: rgba(9, 132, 227, 0.2);
+  color: rgba(9, 132, 227, 1);
 }
 
 .svc-step-4 .svc-step-num {
-  color: rgba(232, 67, 147, 0.2);
+  color: rgba(232, 67, 147, 1);
 }
 
-.svc-step-1:hover .svc-step-num {
-  color: rgba(108, 92, 231, 0.5);
-  transform: scale(1.1);
-}
 
-.svc-step-2:hover .svc-step-num {
-  color: rgba(0, 184, 148, 0.5);
-  transform: scale(1.1);
-}
-
-.svc-step-3:hover .svc-step-num {
-  color: rgba(9, 132, 227, 0.5);
-  transform: scale(1.1);
-}
-
-.svc-step-4:hover .svc-step-num {
-  color: rgba(232, 67, 147, 0.5);
-  transform: scale(1.1);
-}
 
 .svc-step-title {
   font-size: 20px;
@@ -2412,7 +2382,7 @@ img {
 
 .svc-step-desc {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   margin: 0;
 }
@@ -2962,7 +2932,8 @@ img {
   letter-spacing: -1px;
   line-height: 1.15;
   margin-bottom: 12px;
-  word-break: break-word; /* Ensure long words like TELECOMMUNICATION wrap */
+  word-break: break-word;
+  /* Ensure long words like TELECOMMUNICATION wrap */
 }
 
 .ind-card-subtitle {
@@ -3564,7 +3535,7 @@ img {
 }
 
 .eco-card-1 .eco-card-line {
-  background: linear-gradient(90deg, rgba(15,15,35,0.4), transparent);
+  background: linear-gradient(90deg, rgba(15, 15, 35, 0.4), transparent);
 }
 
 .eco-card-1 .eco-card-desc {
@@ -3599,7 +3570,7 @@ img {
 }
 
 .eco-card-3 .eco-card-line {
-  background: linear-gradient(90deg, rgba(15,15,35,0.4), transparent);
+  background: linear-gradient(90deg, rgba(15, 15, 35, 0.4), transparent);
 }
 
 .eco-card-3 .eco-card-desc {
@@ -4932,7 +4903,7 @@ img {
 
 /* --- Nav Links --- */
 .nav-link {
-  padding: 8px 18px;
+  padding: 8px 3px;
   font-size: 15px;
   font-weight: 600;
   color: #1a1a2e;
@@ -8072,7 +8043,8 @@ img {
 }
 
 .breadcrumb-link {
-  color: #00BFFF; /* Using the beautiful light blue! */
+  color: #00BFFF;
+  /* Using the beautiful light blue! */
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -8203,7 +8175,7 @@ img {
 .ls-hero-content {
   position: relative;
   z-index: 2;
-  padding: 40px 40px;
+  padding: 82px 40px;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -8295,9 +8267,12 @@ img {
 }
 
 @keyframes ls-float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) scale(1);
   }
+
   50% {
     transform: translateY(-20px) scale(1.1);
   }
@@ -10513,7 +10488,7 @@ img {
 .tlc-hero-content {
   position: relative;
   z-index: 2;
-  padding: 120px 80px 80px;
+  padding: 140px 80px 80px;
   max-width: 900px;
 }
 
@@ -16472,7 +16447,8 @@ img {
   width: 100%;
   perspective: 1500px;
   padding: 80px 70px 60px;
-  overflow: hidden; /* Clip perspective-transformed cards behind active card */
+  overflow: hidden;
+  /* Clip perspective-transformed cards behind active card */
 }
 
 .ind-carousel-track {
@@ -17063,7 +17039,7 @@ img {
   background: rgba(255, 255, 255, 0.02);
   border: 1px dashed rgba(162, 155, 254, 0.3);
   border-radius: 28px;
-  box-shadow: 
+  box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
   display: flex;
@@ -17077,7 +17053,7 @@ img {
   border-color: #a29bfe;
   background: rgba(255, 255, 255, 0.04);
   transform: translateY(-8px) scale(1.01);
-  box-shadow: 
+  box-shadow:
     0 30px 80px rgba(108, 92, 231, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -17096,10 +17072,13 @@ img {
 }
 
 @keyframes pulse-placeholder {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.8;
   }
+
   50% {
     transform: scale(1.05);
     opacity: 1;
@@ -17132,7 +17111,7 @@ img {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 24px;
-  box-shadow: 
+  box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -17279,6 +17258,7 @@ img {
   color: #a29bfe;
   box-shadow: 0 0 20px rgba(108, 92, 231, 0.4);
 }
+
 .ind-quicknav-btn.ind-quicknav-btn-active.active-btn-purple {
   background: linear-gradient(135deg, #6c5ce7, #a29bfe);
   border-color: #6c5ce7;
@@ -17292,6 +17272,7 @@ img {
   color: #55efc4;
   box-shadow: 0 0 20px rgba(0, 184, 148, 0.4);
 }
+
 .ind-quicknav-btn.ind-quicknav-btn-active.active-btn-green {
   background: linear-gradient(135deg, #00b894, #55efc4);
   border-color: #00b894;
@@ -17305,6 +17286,7 @@ img {
   color: #74b9ff;
   box-shadow: 0 0 20px rgba(9, 132, 227, 0.4);
 }
+
 .ind-quicknav-btn.ind-quicknav-btn-active.active-btn-blue {
   background: linear-gradient(135deg, #0984e3, #74b9ff);
   border-color: #0984e3;
@@ -17318,6 +17300,7 @@ img {
   color: #fd79a8;
   box-shadow: 0 0 20px rgba(232, 67, 147, 0.4);
 }
+
 .ind-quicknav-btn.ind-quicknav-btn-active.active-btn-pink {
   background: linear-gradient(135deg, #e84393, #fd79a8);
   border-color: #e84393;
@@ -17331,6 +17314,7 @@ img {
   color: #fab1a0;
   box-shadow: 0 0 20px rgba(225, 112, 85, 0.4);
 }
+
 .ind-quicknav-btn.ind-quicknav-btn-active.active-btn-orange {
   background: linear-gradient(135deg, #e17055, #fab1a0);
   border-color: #e17055;
@@ -17344,6 +17328,7 @@ img {
   color: #81ecec;
   box-shadow: 0 0 20px rgba(0, 206, 201, 0.4);
 }
+
 .ind-quicknav-btn.ind-quicknav-btn-active.active-btn-teal {
   background: linear-gradient(135deg, #00cec9, #81ecec);
   border-color: #00cec9;

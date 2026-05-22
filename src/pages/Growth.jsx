@@ -130,7 +130,7 @@ function Growth() {
           <div className="svc-hero-image-side">
             <div className="svc-image-box">
               <img
-                src="https://talentpair.com/wp-content/uploads/2023/03/main_animation_dan.gif"
+                src="/gifs/main_animation_dan.gif"
                 alt="Growth Illustration"
                 className="hero-illustration growth-hero-illustration"
                 loading="lazy"
