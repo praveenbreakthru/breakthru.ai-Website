@@ -181,7 +181,7 @@ function BotAvatar({ size = 'md' }) {
   const sizeClass = size === 'sm' ? 'cb-avatar-sm' : 'cb-avatar-md'
   return (
     <div className={`cb-avatar ${sizeClass}`}>
-      <img src="https://giffiles.alphacoders.com/112/11291.gif" alt="AI Robot" />
+      <img src="/gifs/chatbot-robot.gif" alt="AI Robot" />
     </div>
   )
 }
@@ -292,7 +292,7 @@ export default function Chatbot({ onClose, variant = 'floating' }) {
   ])
   const [input, setInput] = useState('')
   const [isTyping, setIsTyping] = useState(false)
-  const [isMuted, setIsMuted] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
   
   // Model state tracker
   const [modelReady, setModelReady] = useState(!!embedderPipeline);

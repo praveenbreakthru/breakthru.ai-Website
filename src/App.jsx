@@ -440,10 +440,10 @@ function Footer() {
           <div className="footer-col">
             <h4 className="footer-col-title">Practices</h4>
             <ul className="footer-links">
-              <li><Link to="/services" className="footer-link">Fintech</Link></li>
-              <li><Link to="/services" className="footer-link">Manufactring</Link></li>
-              <li><Link to="/services" className="footer-link">Telecom</Link></li>
-              <li><Link to="/services" className="footer-link">Breakthru Labs</Link></li>
+              <li><Link to="/story/fintech" className="footer-link">Fintech</Link></li>
+              <li><Link to="/story/manufacturing" className="footer-link">Manufacturing</Link></li>
+              <li><Link to="/story/telecom" className="footer-link">Telecom</Link></li>
+              <li><Link to="/story/breakthru-labs" className="footer-link">Breakthru Labs</Link></li>
             </ul>
           </div>
 
@@ -475,9 +475,9 @@ function Footer() {
             © {new Date().getFullYear()} breakthru.ai. All rights reserved.
           </div>
           <div className="footer-legal">
-            <Link to="/aboutus" className="footer-legal-link">Privacy Policy</Link>
-            <Link to="/aboutus" className="footer-legal-link">Terms of Service</Link>
-            <Link to="/aboutus" className="footer-legal-link">Cookie Policy</Link>
+            <Link to="" className="footer-legal-link">Privacy Policy</Link>
+            <Link to="" className="footer-legal-link">Terms of Service</Link>
+            <Link to="" className="footer-legal-link">Cookie Policy</Link>
           </div>
         </div>
       </div>
@@ -487,8 +487,18 @@ function Footer() {
 
 
 function App() {
-  // Initialize to false on mobile, true on desktop
-  const [chatbotOpen, setChatbotOpen] = useState(window.innerWidth > 768)
+  const location = useLocation();
+
+  // Initialize to false on mobile, true on desktop ONLY if on home page
+  const [chatbotOpen, setChatbotOpen] = useState(
+    window.innerWidth > 768 && window.location.pathname === '/'
+  )
+
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      setChatbotOpen(false)
+    }
+  }, [location.pathname])
 
   const toggleChatbot = () => setChatbotOpen(prev => !prev)
   const closeChatbot = () => setChatbotOpen(false)
@@ -536,7 +546,7 @@ function App() {
           </svg>
         ) : (
           <img
-            src="https://giffiles.alphacoders.com/112/11291.gif"
+            src="/gifs/chatbot-robot.gif"
             alt="AI Assistant"
             className="ai-toggle-gif"
           />

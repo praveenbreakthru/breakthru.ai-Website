@@ -83,7 +83,7 @@ function BreakthruLabsStory() {
           </div>
           <div className="ls-hero-right">
             <img
-              src="https://s13.gifyu.com/images/bmPda.gif"
+              src="/gifs/breakthru-labs.gif"
               alt="Breakthru Labs Animation"
               className="ls-hero-animation-gif"
             />

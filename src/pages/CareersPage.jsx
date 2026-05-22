@@ -432,7 +432,7 @@ function CareersPage() {
             <p className="careers-cta-desc">
               We're always looking for exceptional talent. Send us your profile and let's talk.
             </p>
-            <a href="https://mail.google.com/mail/?view=cm&to=" target="_blank" rel="noopener noreferrer" className="careers-cta-button">
+            <a href="https://mail.google.com/mail/?view=cm&to=contact@breakthru.ai" target="_blank" rel="noopener noreferrer" className="careers-cta-button">
               <span>Send Your Profile</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

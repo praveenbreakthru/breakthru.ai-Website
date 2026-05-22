@@ -126,7 +126,7 @@ function Strategy() {
           <div className="svc-hero-image-side">
             <div className="svc-image-box">
               <img
-                src="https://www.echelonedge.com/wp-content/themes/echelon/assets/img/echelon-data-quipo.gif"
+                src="/gifs/echelon-data-quipo.gif"
                 alt="Strategic Planning Illustration"
                 className="hero-illustration strategy-hero-illustration"
                 loading="lazy"
