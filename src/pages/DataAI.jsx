@@ -126,7 +126,7 @@ function DataAI() {
           <div className="svc-hero-image-side">
             <div className="svc-image-box">
               <img
-                src="https://jnnce.ac.in/jnndemo/aiml.gif"
+                src="/gifs/aiml.gif"
                 alt="Data and AI Illustration"
                 className="hero-illustration dataai-hero-illustration"
                 loading="lazy"

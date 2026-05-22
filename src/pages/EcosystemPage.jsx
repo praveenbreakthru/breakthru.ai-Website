@@ -39,7 +39,7 @@ function EcosystemPage() {
             <div className="breadcrumb-nav">
         <Link to="/" className="breadcrumb-link">Home</Link>
         <span className="breadcrumb-separator"> &gt; </span>
-        <span className="breadcrumb-current">Solutions</span>
+        <span className="breadcrumb-current">Capabilities</span>
       </div>
       {/* Ecosystem Section */}
       <section

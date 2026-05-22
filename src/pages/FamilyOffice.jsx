@@ -128,7 +128,7 @@ function FamilyOffice() {
           <div className="svc-hero-image-side">
             <div className="svc-image-box">
               <img
-                src="https://cdn.dribbble.com/userupload/29647510/file/original-6c41bc159984aa848eec332e1d774c8d.gif"
+                src="/gifs/family-office-dribbble.gif"
                 alt="Family Office Illustration"
                 className="hero-illustration fo-hero-illustration"
                 loading="lazy"

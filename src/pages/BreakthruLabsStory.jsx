@@ -83,7 +83,7 @@ function BreakthruLabsStory() {
           </div>
           <div className="ls-hero-right">
             <img
-              src="https://s13.gifyu.com/images/bmPda.gif"
+              src="/gifs/breakthru-labs.gif"
               alt="Breakthru Labs Animation"
               className="ls-hero-animation-gif"
             />
@@ -152,7 +152,6 @@ function BreakthruLabsStory() {
                   <li>Sentiment Analysis on Replies</li>
                   <li>Workflow Automation</li>
                 </ul>
-                <a href="/Nexz Bd.pptx" download className="ls-case-study-btn">Case Study</a>
               </div>
               <div className="ls-product-card-glow" />
             </div>
@@ -179,7 +178,6 @@ function BreakthruLabsStory() {
                   <li>Automated War Rooms</li>
                   <li>Predictive Breach Detection</li>
                 </ul>
-                <a href="/Agent Lenz.pdf" download className="ls-case-study-btn">Case Study</a>
               </div>
               <div className="ls-product-card-glow" />
             </div>

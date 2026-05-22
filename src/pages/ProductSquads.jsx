@@ -132,7 +132,7 @@ function ProductSquads() {
           <div className="svc-hero-image-side">
             <div className="svc-image-box">
               <img
-                src="https://liveimages.algoworks.com/new-algoworks/wp-content/uploads/2022/06/22140355/effective-product-team.gif"
+                src="/gifs/effective-product-team.gif"
                 alt="Product Squads Illustration"
                 className="hero-illustration ps-hero-illustration"
                 loading="lazy"

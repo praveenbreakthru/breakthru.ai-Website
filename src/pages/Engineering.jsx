@@ -87,7 +87,7 @@ function Engineering() {
 
   return (
     <div className="wrapper-content">
-            <div className="breadcrumb-nav">
+      <div className="breadcrumb-nav">
         <Link to="/" className="breadcrumb-link">Home</Link>
         <span className="breadcrumb-separator"> &gt; </span>
         <Link to="/services" className="breadcrumb-link">Services</Link>
@@ -126,7 +126,7 @@ function Engineering() {
           <div className="svc-hero-image-side">
             <div className="svc-image-box">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D12AQHGG4J6b6OmyQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1709674937953?e=1776297600&v=beta&t=fWARdUJDFgzrCf2GGmijEOM2Hk8enVeQRP8ymzxfmnk"
+                src="/gifs/engineering-pixabay.gif"
                 alt="Engineering Illustration"
                 className="hero-illustration eng-hero-illustration"
                 loading="lazy"
