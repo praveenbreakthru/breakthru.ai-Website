@@ -126,7 +126,7 @@ function Engineering() {
           <div className="svc-hero-image-side">
             <div className="svc-image-box">
               <img
-                src="https://cdn.pixabay.com/animation/2023/05/16/19/08/19-08-28-374_512.gif"
+                src="/gifs/engineering-pixabay.gif"
                 alt="Engineering Illustration"
                 className="hero-illustration eng-hero-illustration"
                 loading="lazy"

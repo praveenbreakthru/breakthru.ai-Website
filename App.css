@@ -4851,6 +4851,7 @@ img {
   justify-content: space-between;
   padding: 0 40px;
   height: 72px;
+  gap: 24px;
 }
 
 .header-logo {
@@ -4861,19 +4862,42 @@ img {
   font-weight: 800;
   color: #0f0f23;
   letter-spacing: -0.5px;
+  transition: gap 0.3s ease;
+  flex-shrink: 0;
+}
+
+.header-center-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.sidebar-open .header-logo {
+  gap: 6px;
 }
 
 .header-logo-img {
   height: 36px;
   width: auto;
   object-fit: contain;
+  transition: height 0.3s ease;
+}
+
+.sidebar-open .header-logo-img {
+  height: 28px;
 }
 
 .header-logo-text {
-  font-size: 20px;
+  font-size: clamp(14px, 1.5vw, 20px);
   font-weight: 700;
   color: #0f0f23;
   letter-spacing: -0.3px;
+  transition: font-size 0.3s ease;
+}
+
+.sidebar-open .header-logo-text {
+  font-size: 14px;
 }
 
 .nav-menu {
@@ -4884,16 +4908,15 @@ img {
 
 /* --- Nav Links --- */
 .nav-link {
-  padding: 8px 18px;
+  padding: 8px 8px;
   font-size: 15px;
   font-weight: 600;
   color: #1a1a2e;
   border-radius: 8px;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-  background: #f4f3ff;
   color: #6c5ce7;
 }
 
@@ -4906,7 +4929,7 @@ img {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 18px;
+  padding: 8px 8px;
   font-size: 15px;
   font-weight: 600;
   color: #1a1a2e;
@@ -4915,11 +4938,10 @@ img {
   cursor: pointer;
   border-radius: 8px;
   font-family: inherit;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .nav-dropdown-toggle:hover {
-  background: #f4f3ff;
   color: #6c5ce7;
 }
 
