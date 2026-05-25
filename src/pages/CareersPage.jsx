@@ -13,7 +13,7 @@ function CareersPage() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) {
-          setActivePosition(-1)
+          // Do nothing, slider doesn't reset now
         }
       },
       { threshold: 0.05 }
@@ -23,7 +23,15 @@ function CareersPage() {
   }, [])
   const [statsVisible, setStatsVisible] = useState(false)
   const navigate = useNavigate()
-  const [activePosition, setActivePosition] = useState(-1)
+  const [activePosition, setActivePosition] = useState(0)
+
+  const handleNext = () => {
+    setActivePosition(p => (p + 1) % positions.length)
+  }
+
+  const handlePrev = () => {
+    setActivePosition(p => (p - 1 + positions.length) % positions.length)
+  }
 
   const positions = [
     { label: 'Data Engineer', index: 0, theme: 'btn-purple' },
@@ -244,18 +252,25 @@ function CareersPage() {
                 </button>
               ))}
             </div>
-            <div className="careers-positions-track">
-              <div 
-                className="careers-positions-row"
-                style={activePosition !== -1 ? {
-                  animation: 'none',
-                  position: 'relative',
-                  left: '50%',
-                  transform: `translateX(-${activePosition * 340 + 160}px)`,
-                  transition: 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), left 0.6s ease'
-                } : {}}
-              >
-                <div className={`careers-pos-card careers-pos-purple ${activePosition !== -1 && activePosition !== 0 ? 'careers-pos-inactive' : ''} ${activePosition === 0 ? 'careers-pos-active' : ''}`}>
+            <div className="careers-slider-container" style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+              <button onClick={handlePrev} className="careers-slider-btn careers-slider-prev" aria-label="Previous job">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+              
+              <div className="careers-positions-track" style={{ flex: 1, margin: '0 20px', overflow: 'hidden', padding: '40px 0' }}>
+                <div 
+                  className="careers-positions-row"
+                  style={{
+                    display: 'flex',
+                    position: 'relative',
+                    left: '50%',
+                    transform: `translateX(-${(activePosition * 340) + 160}px)`,
+                    transition: 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)'
+                  }}
+                >
+                <div className={`careers-pos-card careers-pos-purple ${activePosition !== 0 ? 'careers-pos-inactive' : 'careers-pos-active'}`}>
                   <div className="careers-pos-top">
                     <span className="careers-pos-type">Full-time</span>
                   </div>
@@ -267,9 +282,12 @@ function CareersPage() {
                     <span className="careers-pos-tag">Databricks</span>
                     <span className="careers-pos-tag">Python</span>
                   </div>
+                  <div style={{ marginTop: '20px', textAlign: 'left' }}>
+                    <Link to="/careers/data-engineer" className="careers-apply-btn">Apply Now</Link>
+                  </div>
                 </div>
 
-                <div className={`careers-pos-card careers-pos-green ${activePosition !== -1 && activePosition !== 1 ? 'careers-pos-inactive' : ''} ${activePosition === 1 ? 'careers-pos-active' : ''}`}>
+                <div className={`careers-pos-card careers-pos-green ${activePosition !== 1 ? 'careers-pos-inactive' : 'careers-pos-active'}`}>
                   <div className="careers-pos-top">
                     <span className="careers-pos-type">Full-time</span>
                   </div>
@@ -281,9 +299,12 @@ function CareersPage() {
                     <span className="careers-pos-tag">Terraform</span>
                     <span className="careers-pos-tag">Go</span>
                   </div>
+                  <div style={{ marginTop: '20px', textAlign: 'left' }}>
+                    <Link to="/careers/platform-engineer" className="careers-apply-btn">Apply Now</Link>
+                  </div>
                 </div>
 
-                <div className={`careers-pos-card careers-pos-blue ${activePosition !== -1 && activePosition !== 2 ? 'careers-pos-inactive' : ''} ${activePosition === 2 ? 'careers-pos-active' : ''}`}>
+                <div className={`careers-pos-card careers-pos-blue ${activePosition !== 2 ? 'careers-pos-inactive' : 'careers-pos-active'}`}>
                   <div className="careers-pos-top">
                     <span className="careers-pos-type">Full-time</span>
                   </div>
@@ -295,9 +316,12 @@ function CareersPage() {
                     <span className="careers-pos-tag">RAG</span>
                     <span className="careers-pos-tag">LangChain</span>
                   </div>
+                  <div style={{ marginTop: '20px', textAlign: 'left' }}>
+                    <Link to="/careers/genai-architect" className="careers-apply-btn">Apply Now</Link>
+                  </div>
                 </div>
 
-                <div className={`careers-pos-card careers-pos-pink ${activePosition !== -1 && activePosition !== 3 ? 'careers-pos-inactive' : ''} ${activePosition === 3 ? 'careers-pos-active' : ''}`}>
+                <div className={`careers-pos-card careers-pos-pink ${activePosition !== 3 ? 'careers-pos-inactive' : 'careers-pos-active'}`}>
                   <div className="careers-pos-top">
                     <span className="careers-pos-type">Full-time</span>
                   </div>
@@ -309,9 +333,12 @@ function CareersPage() {
                     <span className="careers-pos-tag">Node.js</span>
                     <span className="careers-pos-tag">TypeScript</span>
                   </div>
+                  <div style={{ marginTop: '20px', textAlign: 'left' }}>
+                    <Link to="/careers/full-stack-developer" className="careers-apply-btn">Apply Now</Link>
+                  </div>
                 </div>
 
-                <div className={`careers-pos-card careers-pos-orange ${activePosition !== -1 && activePosition !== 4 ? 'careers-pos-inactive' : ''} ${activePosition === 4 ? 'careers-pos-active' : ''}`}>
+                <div className={`careers-pos-card careers-pos-orange ${activePosition !== 4 ? 'careers-pos-inactive' : 'careers-pos-active'}`}>
                   <div className="careers-pos-top">
                     <span className="careers-pos-type">Full-time</span>
                   </div>
@@ -323,9 +350,12 @@ function CareersPage() {
                     <span className="careers-pos-tag">CI/CD</span>
                     <span className="careers-pos-tag">Docker</span>
                   </div>
+                  <div style={{ marginTop: '20px', textAlign: 'left' }}>
+                    <Link to="/careers/devops-engineer" className="careers-apply-btn">Apply Now</Link>
+                  </div>
                 </div>
 
-                <div className={`careers-pos-card careers-pos-teal ${activePosition !== -1 && activePosition !== 5 ? 'careers-pos-inactive' : ''} ${activePosition === 5 ? 'careers-pos-active' : ''}`}>
+                <div className={`careers-pos-card careers-pos-teal ${activePosition !== 5 ? 'careers-pos-inactive' : 'careers-pos-active'}`}>
                   <div className="careers-pos-top">
                     <span className="careers-pos-type">Full-time</span>
                   </div>
@@ -336,95 +366,20 @@ function CareersPage() {
                     <span className="careers-pos-tag">Digital Transformation</span>
                     <span className="careers-pos-tag">BFSI</span>
                   </div>
-                </div>
-
-                {activePosition === -1 && (<>
-                {/* Duplicate set for seamless loop */}
-                <div className="careers-pos-card careers-pos-purple">
-                  <div className="careers-pos-top">
-                    <span className="careers-pos-type">Full-time</span>
-                  </div>
-                  <h3 className="careers-pos-title">Senior Data Engineer</h3>
-                  <span className="careers-pos-dept">Data &amp; AI</span>
-                  <span className="careers-pos-location">Bengaluru / Remote</span>
-                  <div className="careers-pos-tags">
-                    <span className="careers-pos-tag">Snowflake</span>
-                    <span className="careers-pos-tag">Databricks</span>
-                    <span className="careers-pos-tag">Python</span>
+                  <div style={{ marginTop: '20px', textAlign: 'left' }}>
+                    <Link to="/careers/technical-consultant" className="careers-apply-btn">Apply Now</Link>
                   </div>
                 </div>
-
-                <div className="careers-pos-card careers-pos-green">
-                  <div className="careers-pos-top">
-                    <span className="careers-pos-type">Full-time</span>
-                  </div>
-                  <h3 className="careers-pos-title">Platform Engineer</h3>
-                  <span className="careers-pos-dept">Engineering</span>
-                  <span className="careers-pos-location">Bengaluru</span>
-                  <div className="careers-pos-tags">
-                    <span className="careers-pos-tag">Kubernetes</span>
-                    <span className="careers-pos-tag">Terraform</span>
-                    <span className="careers-pos-tag">Go</span>
-                  </div>
-                </div>
-
-                <div className="careers-pos-card careers-pos-blue">
-                  <div className="careers-pos-top">
-                    <span className="careers-pos-type">Full-time</span>
-                  </div>
-                  <h3 className="careers-pos-title">GenAI Solutions Architect</h3>
-                  <span className="careers-pos-dept">Data &amp; AI</span>
-                  <span className="careers-pos-location">Remote</span>
-                  <div className="careers-pos-tags">
-                    <span className="careers-pos-tag">LLMs</span>
-                    <span className="careers-pos-tag">RAG</span>
-                    <span className="careers-pos-tag">LangChain</span>
-                  </div>
-                </div>
-
-                <div className="careers-pos-card careers-pos-pink">
-                  <div className="careers-pos-top">
-                    <span className="careers-pos-type">Full-time</span>
-                  </div>
-                  <h3 className="careers-pos-title">Full Stack Developer</h3>
-                  <span className="careers-pos-dept">Product Squads</span>
-                  <span className="careers-pos-location">Bengaluru / Hyderabad</span>
-                  <div className="careers-pos-tags">
-                    <span className="careers-pos-tag">React</span>
-                    <span className="careers-pos-tag">Node.js</span>
-                    <span className="careers-pos-tag">TypeScript</span>
-                  </div>
-                </div>
-
-                <div className="careers-pos-card careers-pos-orange">
-                  <div className="careers-pos-top">
-                    <span className="careers-pos-type">Full-time</span>
-                  </div>
-                  <h3 className="careers-pos-title">DevOps Engineer</h3>
-                  <span className="careers-pos-dept">Engineering</span>
-                  <span className="careers-pos-location">Remote</span>
-                  <div className="careers-pos-tags">
-                    <span className="careers-pos-tag">AWS</span>
-                    <span className="careers-pos-tag">CI/CD</span>
-                    <span className="careers-pos-tag">Docker</span>
-                  </div>
-                </div>
-
-                <div className="careers-pos-card careers-pos-teal">
-                  <div className="careers-pos-top">
-                    <span className="careers-pos-type">Full-time</span>
-                  </div>
-                  <h3 className="careers-pos-title">Technical Consultant</h3>
-                  <span className="careers-pos-dept">Strategy</span>
-                  <span className="careers-pos-location">Dubai / Riyadh</span>
-                  <div className="careers-pos-tags">
-                    <span className="careers-pos-tag">Digital Transformation</span>
-                    <span className="careers-pos-tag">BFSI</span>
-                  </div>
-                </div></>)}
               </div>
             </div>
+
+            <button onClick={handleNext} className="careers-slider-btn careers-slider-next" aria-label="Next job">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
           </div>
+        </div>
 
           {/* Don't See Your Role */}
           <div className="careers-cta">
