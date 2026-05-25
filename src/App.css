@@ -3521,42 +3521,17 @@ img {
 }
 
 .eco-card-1 {
-  background: linear-gradient(145deg, #e84393 0%, #fd1761 100%);
+  background: linear-gradient(145deg, #FF3621 0%, #D32514 100%);
   transform: rotate(-2deg);
 }
 
-.eco-card-1 .eco-card-number,
-.eco-card-1 .eco-card-sub {
-  color: rgba(15, 15, 35, 0.7);
-}
-
-.eco-card-1 .eco-card-title {
-  color: #0f0f23;
-}
-
-.eco-card-1 .eco-card-line {
-  background: linear-gradient(90deg, rgba(15, 15, 35, 0.4), transparent);
-}
-
-.eco-card-1 .eco-card-desc {
-  color: rgba(15, 15, 35, 0.85);
-}
-
-.eco-card-1 .eco-card-list li {
-  color: rgba(15, 15, 35, 0.9);
-}
-
-.eco-card-1 .eco-card-list li::before {
-  background: rgba(15, 15, 35, 0.5);
-}
-
 .eco-card-2 {
-  background: linear-gradient(145deg, #2980b9 0%, #1a5276 100%);
+  background: linear-gradient(145deg, #29B5E8 0%, #1DA1D1 100%);
   transform: rotate(1deg);
 }
 
 .eco-card-3 {
-  background: linear-gradient(145deg, #f1c40f 0%, #f39c12 100%);
+  background: #ffffff;
   transform: rotate(-1deg);
 }
 
@@ -3617,6 +3592,8 @@ img {
   height: 52px;
   z-index: 3;
   object-fit: contain;
+  border-radius: 12px;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
@@ -4422,22 +4399,44 @@ img {
 .careers-positions-row {
   display: flex;
   gap: 20px;
-  animation: careersMarquee 40s linear infinite;
   width: max-content;
 }
 
-.careers-positions-row:hover {
-  animation-play-state: paused;
+.careers-slider-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
-@keyframes careersMarquee {
-  0% {
-    transform: translateX(0);
-  }
+.careers-slider-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
 
-  100% {
-    transform: translateX(-50%);
-  }
+.careers-apply-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.careers-apply-btn:hover {
+  background: #fff;
+  color: #000;
 }
 
 .careers-pos-card {
@@ -4456,9 +4455,8 @@ img {
 }
 
 .careers-pos-card.careers-pos-inactive {
-  opacity: 0.3;
+  opacity: 0.6;
   transform: scale(0.9) translateY(0);
-  pointer-events: none;
 }
 
 .careers-pos-card.careers-pos-active {

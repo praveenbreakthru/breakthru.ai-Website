@@ -23,6 +23,7 @@ import ServicesPage from './pages/ServicesPage'
 import IndustriesPage from './pages/IndustriesPage'
 import EcosystemPage from './pages/EcosystemPage'
 import CareersPage from './pages/CareersPage'
+import JobPage from './pages/JobPage'
 import WhoWeAre from './pages/WhoWeAre'
 
 function Header({ onToggleChatbot }) {
@@ -530,6 +531,7 @@ function App() {
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/ecosystem" element={<EcosystemPage />} />
           <Route path="/careers" element={<CareersPage />} />
+          <Route path="/careers/:jobId" element={<JobPage />} />
           <Route path="/whoweare" element={<WhoWeAre />} />
         </Routes>
         <Footer />
