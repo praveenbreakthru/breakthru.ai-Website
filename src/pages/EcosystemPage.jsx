@@ -73,7 +73,7 @@ function EcosystemPage() {
             {/* Databricks */}
             <div className="eco-card eco-card-1">
               <div className="eco-card-accent" />
-              <img src="/data.png" alt="Databricks" className="eco-card-logo" />
+              <img src="/databricks-logo.png" alt="Databricks" className="eco-card-logo" />
               <div className="eco-card-inner">
                 <span className="eco-card-number">PARTNER 01</span>
                 <h3 className="eco-card-title">Databricks</h3>
@@ -95,7 +95,7 @@ function EcosystemPage() {
             {/* Snowflake */}
             <div className="eco-card eco-card-2">
               <div className="eco-card-accent" />
-              <img src="/snow.png" alt="Snowflake" className="eco-card-logo" />
+              <img src="/snowflake-logo.png" alt="Snowflake" className="eco-card-logo" />
               <div className="eco-card-inner">
                 <span className="eco-card-number">PARTNER 02</span>
                 <h3 className="eco-card-title">Snowflake</h3>
@@ -117,7 +117,7 @@ function EcosystemPage() {
             {/* Google Cloud */}
             <div className="eco-card eco-card-3">
               <div className="eco-card-accent" />
-              <img src="/GC.png" alt="Google Cloud" className="eco-card-logo" />
+              <img src="/google-cloud-logo.jpg" alt="Google Cloud" className="eco-card-logo" />
               <div className="eco-card-inner">
                 <span className="eco-card-number">PARTNER 03</span>
                 <h3 className="eco-card-title">Google Cloud</h3>
